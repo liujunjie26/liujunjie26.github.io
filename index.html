@@ -1,142 +1,540 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>刘俊杰 · 个人简历</title>
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Segoe UI', sans-serif; background: #f4f7fc; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
-.resume { max-width: 1000px; width: 100%; background: white; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); overflow: hidden; }
-.header { background: #4f6ef7; padding: 30px; color: white; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
-.avatar { width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: bold; border: 3px solid rgba(255,255,255,0.3); }
-.header-info h1 { font-size: 28px; }
-.subtitle { opacity: 0.9; display: flex; gap: 15px; flex-wrap: wrap; }
-.body { display: grid; grid-template-columns: 260px 1fr; }
-.sidebar { background: #fafbff; padding: 25px; border-right: 1px solid #e2e8f0; }
-.sidebar-section { margin-bottom: 25px; }
-.sidebar-section h3 { font-size: 14px; text-transform: uppercase; color: #475569; margin-bottom: 12px; }
-.contact-item { display: flex; align-items: center; gap: 10px; padding: 6px 0; color: #475569; text-decoration: none; }
-.contact-item i { width: 20px; color: #4f6ef7; }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.skill-tags span { background: #eef2ff; color: #3a54d4; padding: 4px 14px; border-radius: 30px; font-size: 13px; }
-.edu-item { margin-bottom: 12px; }
-.edu-item .school { font-weight: 600; }
-.edu-item .year { font-size: 12px; color: #64748b; background: #f1f5f9; display: inline-block; padding: 2px 12px; border-radius: 20px; margin-top: 4px; }
-.main { padding: 30px; }
-.main-section { margin-bottom: 30px; }
-.main-section h3 { font-size: 18px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-.main-section h3 i { color: #4f6ef7; }
-.profile-text { color: #334155; line-height: 1.8; }
-.project-item { margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 16px; }
-.project-item .title { font-weight: 600; display: flex; justify-content: space-between; flex-wrap: wrap; }
-.project-item .desc { color: #475569; font-size: 14px; margin-top: 4px; }
-.project-item .tech { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-.project-item .tech span { background: #f1f5f9; padding: 2px 12px; border-radius: 30px; font-size: 12px; color: #475569; }
-.footer { background: #fafbff; padding: 16px 30px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 13px; color: #64748b; }
-.quote-box { background: #f0f4ff; padding: 16px 20px; border-radius: 12px; border-left: 4px solid #4f6ef7; margin-top: 12px; }
-.quote-box p { color: #1e293b; font-weight: 500; margin: 0; }
-@media (max-width: 700px) { .body { grid-template-columns: 1fr; } .sidebar { border-right: none; border-bottom: 1px solid #e2e8f0; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘俊杰 · 个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #f0f2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px;
+        }
+        .resume {
+            max-width: 1000px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 24px 72px rgba(15, 23, 42, 0.12);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* ===== 头部：深蓝+金 ===== */
+        .header {
+            background: linear-gradient(145deg, #0b1a33, #132b4a);
+            padding: 32px 36px;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 24px;
+            border-bottom: 4px solid #d4a853;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 3px solid #d4a853;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            font-weight: 700;
+            color: #d4a853;
+            flex-shrink: 0;
+            user-select: none;
+        }
+        .header-info h1 {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .header-info h1 span {
+            color: #d4a853;
+        }
+        .subtitle {
+            opacity: 0.85;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            font-size: 15px;
+            margin-top: 4px;
+        }
+        .subtitle i {
+            margin-right: 4px;
+        }
+        .header-tagline {
+            margin-top: 8px;
+            font-size: 15px;
+            color: #d4a853;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            border-left: 3px solid #d4a853;
+            padding-left: 14px;
+        }
+
+        /* ===== 主体 ===== */
+        .body {
+            display: grid;
+            grid-template-columns: 270px 1fr;
+        }
+        .sidebar {
+            background: #f8faff;
+            padding: 28px 24px;
+            border-right: 1px solid #e9edf4;
+        }
+        .sidebar-section {
+            margin-bottom: 28px;
+        }
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+        .sidebar-section h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #1e2f4a;
+            font-weight: 700;
+            margin-bottom: 14px;
+            border-bottom: 2px solid #d4a853;
+            padding-bottom: 6px;
+            display: inline-block;
+        }
+
+        /* 联系方式（可点击图标） */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            color: #1e2f4a;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+            border-radius: 8px;
+            padding-left: 10px;
+        }
+        .contact-item:hover {
+            background: #e6edf8;
+            color: #0b1a33;
+        }
+        .contact-item .icon {
+            width: 28px;
+            height: 28px;
+            background: #132b4a;
+            color: #d4a853;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            flex-shrink: 0;
+            font-style: normal;
+        }
+
+        /* 技能标签 */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .skill-tags span {
+            background: #132b4a;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+        }
+        .skill-tags span.gold {
+            background: #d4a853;
+            color: #0b1a33;
+        }
+
+        /* 教育（无高中） */
+        .edu-item .school {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0b1a33;
+        }
+        .edu-item .major {
+            font-size: 14px;
+            color: #2d3f5e;
+        }
+        .edu-item .year {
+            font-size: 12px;
+            color: #5f6f89;
+            background: #e9edf4;
+            display: inline-block;
+            padding: 2px 14px;
+            border-radius: 30px;
+            margin-top: 4px;
+        }
+
+        /* 语言 */
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            font-size: 14px;
+            border-bottom: 1px dashed #e9edf4;
+        }
+        .lang-item:last-child {
+            border-bottom: none;
+        }
+        .lang-item .level {
+            color: #5f6f89;
+            font-size: 13px;
+        }
+
+        /* ===== 主内容 ===== */
+        .main {
+            padding: 28px 32px 32px 32px;
+        }
+        .main-section {
+            margin-bottom: 30px;
+        }
+        .main-section:last-child {
+            margin-bottom: 0;
+        }
+        .main-section h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #0b1a33;
+            border-bottom: 2px solid #e9edf4;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .main-section h3 .badge {
+            background: #d4a853;
+            color: #0b1a33;
+            font-size: 11px;
+            padding: 0 12px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .profile-text {
+            color: #1e2f4a;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+        .profile-text strong {
+            color: #0b1a33;
+        }
+        .quote-box {
+            background: #f0f4fe;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 5px solid #d4a853;
+            margin-top: 14px;
+        }
+        .quote-box p {
+            color: #0b1a33;
+            font-weight: 500;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* 时间轴项目 */
+        .project-item {
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #eef2f8;
+            position: relative;
+            padding-left: 16px;
+            border-left: 3px solid transparent;
+            transition: 0.2s;
+        }
+        .project-item:hover {
+            border-left-color: #d4a853;
+            background: #fafcff;
+            margin-left: -4px;
+            padding-left: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .project-item .title {
+            font-weight: 700;
+            font-size: 15px;
+            color: #0b1a33;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .project-item .title .tag {
+            background: #132b4a;
+            color: #fff;
+            padding: 0 12px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .project-item .title .date {
+            font-size: 12px;
+            font-weight: 400;
+            color: #5f6f89;
+        }
+        .project-item .desc {
+            color: #2d3f5e;
+            font-size: 14px;
+            margin-top: 4px;
+            line-height: 1.7;
+        }
+        .project-item .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .project-item .tech span {
+            background: #e9edf4;
+            padding: 2px 14px;
+            border-radius: 30px;
+            font-size: 11px;
+            color: #1e2f4a;
+            font-weight: 500;
+        }
+
+        /* 个人特质（两列） */
+        .traits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+            list-style: none;
+            color: #1e2f4a;
+            font-size: 14px;
+        }
+        .traits li {
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .traits li::before {
+            content: "◆";
+            color: #d4a853;
+            font-size: 12px;
+        }
+
+        /* ===== 底部 ===== */
+        .footer {
+            background: #f8faff;
+            padding: 14px 36px;
+            border-top: 1px solid #e9edf4;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: #5f6f89;
+        }
+        .footer a {
+            color: #132b4a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .footer a:hover {
+            color: #d4a853;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 780px) {
+            .body {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e9edf4;
+            }
+            .header {
+                padding: 24px 20px;
+            }
+            .main {
+                padding: 20px;
+            }
+            .traits {
+                grid-template-columns: 1fr;
+            }
+            .footer {
+                padding: 14px 20px;
+                flex-direction: column;
+                gap: 6px;
+                text-align: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .avatar {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+            .header-info h1 {
+                font-size: 24px;
+            }
+            .subtitle {
+                font-size: 13px;
+                gap: 6px 16px;
+            }
+            .header-tagline {
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="resume">
-  <header class="header">
-    <div class="avatar">刘</div>
-    <div class="header-info">
-      <h1>刘俊杰</h1>
-      <div class="subtitle">
-        <span>🎓 26电子本5</span>
-        <span>📍 湖北 · 襄阳</span>
-        <span>📅 大一 · 2026</span>
-      </div>
+    <div class="resume">
+
+        <!-- 头部 -->
+        <header class="header">
+            <div class="avatar">刘</div>
+            <div class="header-info">
+                <h1>刘俊杰</h1>
+                <div class="subtitle">
+                    <span>🎓 深圳职业技术大学 · 电子信息工程</span>
+                    <span>📍 湖北 · 襄阳</span>
+                    <span>📅 大一 · 2026</span>
+                </div>
+                <div class="header-tagline">用AI赋能学习 · 用行动证明价值</div>
+            </div>
+        </header>
+
+        <div class="body">
+
+            <!-- 侧边栏 -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>📬 联系方式</h3>
+                    <a href="tel:19074523663" class="contact-item">
+                        <span class="icon">📞</span> 19074523663
+                    </a>
+                    <a href="https://weixin.qq.com/" class="contact-item">
+                        <span class="icon">💬</span> Silicon_07
+                    </a>
+                    <a href="mailto:1395460356@qq.com" class="contact-item">
+                        <span class="icon">✉️</span> 1395460356@qq.com
+                    </a>
+                    <a href="https://github.com/liujunjie26" target="_blank" class="contact-item">
+                        <span class="icon">🐙</span> github.com/liujunjie26
+                    </a>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>🎓 教育</h3>
+                    <div class="edu-item">
+                        <div class="school">深圳职业技术大学</div>
+                        <div class="major">电子信息工程 · 2026级</div>
+                        <div class="year">2026 – 2030</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>🛠️ 技能标签</h3>
+                    <div class="skill-tags">
+                        <span class="gold">AI工具应用</span>
+                        <span class="gold">知识库搭建</span>
+                        <span>工作流设计</span>
+                        <span>Python</span>
+                        <span>C/C++</span>
+                        <span>HTML/CSS</span>
+                        <span>PPT制作</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>🌐 语言</h3>
+                    <div class="lang-item"><span>中文 (普通话)</span><span class="level">母语</span></div>
+                    <div class="lang-item"><span>英语</span><span class="level">CET-4 备考</span></div>
+                </div>
+            </aside>
+
+            <!-- 主内容 -->
+            <main class="main">
+
+                <section class="main-section">
+                    <h3>👤 关于我</h3>
+                    <div class="profile-text">
+                        <p><strong>刘俊杰</strong>，深圳职业技术大学电子信息工程专业大一新生，来自湖北襄阳。性格踏实、乐于学习，对电子信息与AI技术融合充满热情。</p>
+                        <p style="margin-top:10px;">善于利用AI工具（DeepSeek、ChatGPT等）构建个人知识库与工作流，提升学习效率。入学后主动规划专业学习路径，渴望通过竞赛将理论与实践结合，为团队贡献力量。</p>
+                        <div class="quote-box">
+                            <p>💡 真正的竞争力，来自于持续学习和高效做事的能力。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="main-section">
+                    <h3>🧪 学习与探索 <span class="badge">进行中</span></h3>
+
+                    <div class="project-item">
+                        <div class="title">
+                            <span>个人AI工作流搭建</span>
+                            <span class="date">2026.09 – 至今</span>
+                        </div>
+                        <div class="desc">利用 ChatGPT、Notion AI、Copilot 等工具，搭建从信息收集、整理到输出的完整工作流。已建立个人知识库，涵盖课程笔记、技术文档、项目灵感等 20+ 条结构化条目。</div>
+                        <div class="tech"><span>ChatGPT</span><span>Notion</span><span>知识管理</span><span>自动化</span></div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="title">
+                            <span>电子信息专业学习规划</span>
+                            <span class="date">2026.09</span>
+                        </div>
+                        <div class="desc">通过查阅培养方案、咨询学长、浏览专业论坛，制定了大学四年软硬件双线发展路线，已开始自学 C 语言和电路基础。</div>
+                        <div class="tech"><span>自我驱动</span><span>信息检索</span><span>学习规划</span></div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="title">
+                            <span>个人简历网站开发</span>
+                            <span class="date">2026.09</span>
+                        </div>
+                        <div class="desc">自学 HTML+CSS 制作响应式个人简历，从设计、编码到部署 GitHub Pages 全流程独立完成，作为个人技术名片与学习成果展示。</div>
+                        <div class="tech"><span>HTML5</span><span>CSS3</span><span>GitHub Pages</span></div>
+                    </div>
+                </section>
+
+                <section class="main-section">
+                    <h3>📌 个人特质</h3>
+                    <ul class="traits">
+                        <li>自主学习能力强</li>
+                        <li>善于利用AI工具提效</li>
+                        <li>做事踏实、执行力强</li>
+                        <li>乐于沟通与协作</li>
+                        <li>对新事物保持好奇</li>
+                        <li>愿意为团队投入时间</li>
+                    </ul>
+                </section>
+
+            </main>
+        </div>
+
+        <footer class="footer">
+            <span>© 2026 刘俊杰 · 深职大 电子信息工程</span>
+            <span>
+                <a href="https://liujunjie26.github.io" target="_blank">liujunjie26.github.io</a>
+            </span>
+        </footer>
     </div>
-    <div style="margin-left: auto;">
-      <a href="#" style="color:white; background:rgba(255,255,255,0.15); padding:8px 18px; border-radius:40px; text-decoration:none; font-size:14px;">📄 在线简历</a>
-    </div>
-  </header>
-  <div class="body">
-    <aside class="sidebar">
-      <div class="sidebar-section">
-        <h3>📬 联系方式</h3>
-        <a href="#" class="contact-item"><i>✉️</i> 1395460356@qq.com</a>
-        <a href="#" class="contact-item"><i>📞</i> +86 186 1234 5678</a>
-        <a href="#" class="contact-item"><i>💬</i> 微信: liu_junjie_26</a>
-        <a href="#" class="contact-item"><i>🐙</i> github.com/liujunjie26</a>
-      </div>
-      <div class="sidebar-section">
-        <h3>🎓 教育</h3>
-        <div class="edu-item">
-          <div class="school">XX大学 · 26电子本5班</div>
-          <div>电子信息工程 (2026级)</div>
-          <div class="year">2026 – 2030</div>
-        </div>
-        <div class="edu-item">
-          <div class="school">襄阳五中</div>
-          <div>理科实验班</div>
-          <div class="year">2020 – 2026</div>
-        </div>
-      </div>
-      <div class="sidebar-section">
-        <h3>🛠️ 技能标签</h3>
-        <div class="skill-tags">
-          <span>AI工具应用</span><span>知识库搭建</span><span>工作流设计</span>
-          <span>Python</span><span>C/C++</span><span>HTML/CSS</span>
-          <span>PPT制作</span><span>Git</span>
-        </div>
-      </div>
-      <div class="sidebar-section">
-        <h3>🌐 语言</h3>
-        <div style="display:flex; justify-content:space-between; padding:4px 0;">中文 (普通话) <span style="color:#64748b;">母语</span></div>
-        <div style="display:flex; justify-content:space-between; padding:4px 0;">英语 <span style="color:#64748b;">CET-4 备考</span></div>
-      </div>
-    </aside>
-    <main class="main">
-      <section class="main-section">
-        <h3>👤 关于我</h3>
-        <div class="profile-text">
-          <p><strong>刘俊杰</strong>，26级电子本5班大一新生，来自湖北襄阳。性格踏实、乐于学习，对电子信息专业充满热情。入学以来，快速适应大学生活，主动探索专业方向，同时保持对AI技术的浓厚兴趣。</p>
-          <p style="margin-top:10px;">我特别关注AI工具在工作流和知识管理中的应用，自学搭建了个人的知识库体系，并尝试用AI辅助学习和项目规划。我相信技术和工具的结合能带来更高的效率，也希望能把这些能力应用到未来的竞赛和科研中。</p>
-          <div class="quote-box">
-            <p>💡 我相信：真正的竞争力来自于持续学习和高效做事的能力。</p>
-          </div>
-        </div>
-      </section>
-      <section class="main-section">
-        <h3>🧪 学习与探索</h3>
-        <div class="project-item">
-          <div class="title"><span>个人AI工作流搭建 <span style="background:#eef2ff; padding:2px 12px; border-radius:30px; font-size:12px; color:#3a54d4;">自学实践</span></span> <span style="font-size:13px; color:#64748b;">进行中</span></div>
-          <div class="desc">利用ChatGPT、Notion AI、Copilot等工具，搭建了一套从信息收集、整理到输出的一站式工作流。建立了个人知识库，涵盖课程笔记、技术文档、项目灵感，目前已有20+条结构化条目。</div>
-          <div class="tech"><span>ChatGPT</span><span>Notion</span><span>知识管理</span><span>自动化</span></div>
-        </div>
-        <div class="project-item">
-          <div class="title"><span>电子信息专业学习规划 <span style="background:#eef2ff; padding:2px 12px; border-radius:30px; font-size:12px; color:#3a54d4;">自主研究</span></span> <span style="font-size:13px; color:#64748b;">2026.09</span></div>
-          <div class="desc">通过查阅培养方案、咨询学长学姐、浏览专业论坛，制定了大学四年的学习路线图，明确了软硬件双线发展的方向，并已经开始自学C语言和电路基础。</div>
-          <div class="tech"><span>学习规划</span><span>自我驱动</span><span>信息检索</span></div>
-        </div>
-        <div class="project-item">
-          <div class="title"><span>个人简历网站开发 <span style="background:#eef2ff; padding:2px 12px; border-radius:30px; font-size:12px; color:#3a54d4;">项目实践</span></span> <span style="font-size:13px; color:#64748b;">2026.09</span></div>
-          <div class="desc">自学HTML+CSS制作了响应式个人简历网站，从零开始完成设计、编码、部署全流程，现托管在GitHub Pages上，作为个人技术名片。</div>
-          <div class="tech"><span>HTML5</span><span>CSS3</span><span>GitHub Pages</span></div>
-        </div>
-      </section>
-      <section class="main-section">
-        <h3>📌 个人特质</h3>
-        <ul style="list-style:none; display:flex; flex-wrap:wrap; gap:12px 25px; color:#475569; font-size:14px;">
-          <li>✅ 自主学习能力强</li>
-          <li>✅ 善于利用AI工具提效</li>
-          <li>✅ 做事踏实、执行力好</li>
-          <li>✅ 乐于沟通与协作</li>
-          <li>✅ 对新事物保持好奇心</li>
-          <li>✅ 愿意为团队付出时间</li>
-        </ul>
-      </section>
-    </main>
-  </div>
-  <footer class="footer">
-    <span>© 2026 刘俊杰 · 26电子本5</span>
-    <span>🚀 用行动证明自己</span>
-  </footer>
-</div>
 </body>
 </html>
